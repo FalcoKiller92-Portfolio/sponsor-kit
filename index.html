@@ -487,45 +487,84 @@ html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg-primary);
   #slide6{
     flex-direction:column!important;
     height:auto;min-height:100svh;
-    display:flex;
+    display:flex!important;
   }
   .s6-left{
     width:100%!important;
-    padding:5rem 1.4rem 1.5rem;
+    padding:5rem 1.4rem 1.2rem;
     display:flex;flex-direction:column;
     justify-content:flex-start;
+    position:relative;z-index:2;
   }
   .s6-right{
     width:100%!important;
-    padding:1rem 1.4rem 5.5rem;
-    display:flex;flex-direction:column;
-    gap:1rem;
+    padding:0 1.4rem 5.5rem;
+    display:flex!important;flex-direction:column!important;
+    gap:0;
+    position:relative;z-index:2;
+    overflow:visible!important;
   }
-  .s6-overtitle{font-size:0.65rem;letter-spacing:0.25em;margin-bottom:1rem}
+  .s6-glow{display:none}
+  .s6-overtitle{font-size:0.62rem;letter-spacing:0.22em;margin-bottom:0.8rem}
   .s6-headline{
-    font-size:clamp(2.8rem,10vw,4.5rem)!important;
-    line-height:0.92;margin-bottom:1.2rem;
+    font-size:clamp(2.6rem,9.5vw,4rem)!important;
+    line-height:0.93;margin-bottom:1rem;
   }
   .s6-sub{
-    font-size:0.86rem!important;line-height:1.7;
-    max-width:100%!important;margin-bottom:1.5rem;
+    font-size:0.84rem!important;line-height:1.65;
+    max-width:100%!important;margin-bottom:1.2rem;
     white-space:normal;
   }
   .s6-cta{
-    font-size:0.82rem;padding:12px 20px;
+    font-size:0.8rem;padding:11px 18px;
     width:100%;text-align:center;display:block;
+    margin-bottom:0.5rem;
   }
   .email-cta{
-    font-size:0.75rem;padding:10px 16px;
+    font-size:0.75rem;padding:10px 14px;
     width:100%;justify-content:center;
+    margin-top:0!important;
   }
-  .s6-glow{width:180px;height:180px}
-  .s6-stat-box{padding:0.8rem 1rem}
-  .s6-stat-val{font-size:1.6rem}
-  .s6-stat-label{font-size:0.62rem;letter-spacing:0.15em}
-  .s6-socials{gap:8px}
-  .s6-social-link{font-size:0.75rem;gap:7px}
-  .s6-social-icon{width:15px;height:15px}
+  /* ── SOCIAL prima di tutto, chiari e cliccabili ── */
+  .s6-socials{
+    display:flex!important;flex-direction:column!important;
+    gap:0!important;
+    border:1px solid rgba(184,212,232,0.15);
+    border-radius:6px;
+    overflow:hidden;
+    margin-bottom:1rem;
+  }
+  .s6-social-link{
+    font-size:0.82rem!important;
+    font-family:'Oswald',sans-serif;letter-spacing:0.08em;
+    gap:10px;
+    padding:13px 14px!important;
+    border-bottom:1px solid rgba(184,212,232,0.08);
+    display:flex!important;align-items:center!important;
+    color:var(--steel-light)!important;
+    text-decoration:none;
+    background:rgba(255,255,255,0.02);
+    transition:background 0.15s;
+  }
+  .s6-social-link:active{background:rgba(255,255,255,0.06)}
+  .s6-social-link:last-child{border-bottom:none}
+  .s6-social-icon{width:17px!important;height:17px!important;opacity:0.85;flex-shrink:0}
+  /* ── STAT BOXES: griglia 3 colonne su mobile ── */
+  .s6-stats-row{
+    display:grid!important;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:5px;
+    margin-top:0.8rem;
+    margin-bottom:0;
+  }
+  .s6-stat-box{
+    padding:0.65rem 0.5rem;
+    border-left:2px solid var(--red-primary);
+    background:var(--bg-secondary);
+    box-shadow:inset 2px 0 8px rgba(232,32,26,0.12);
+  }
+  .s6-stat-val{font-size:1.25rem;line-height:1;color:var(--red-primary);font-family:'Bebas Neue',sans-serif;letter-spacing:0.03em}
+  .s6-stat-label{font-size:0.52rem;letter-spacing:0.08em;margin-top:2px;line-height:1.2;color:var(--muted);font-family:'Oswald',sans-serif;text-transform:uppercase}
 
   /* ── NAV ── */
   #nav{padding:0.55rem 1rem}
@@ -713,6 +752,7 @@ html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg-primary);
 .s6-right{width:45%;padding:4rem 3.5rem;display:flex;flex-direction:column;gap:1.5rem;justify-content:center;position:relative;overflow:hidden}
 .s6-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,32,26,0.22) 0%,rgba(232,32,26,0.06) 50%,transparent 70%);pointer-events:none}
 .s6-stat-box{background:var(--bg-secondary);padding:1.2rem 1.5rem;border-left:2px solid var(--red-primary);box-shadow:inset 3px 0 16px rgba(232,32,26,0.14);position:relative;z-index:1}
+.s6-stats-row{display:none}
 .s6-stat-val{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--red-primary);letter-spacing:0.04em;text-shadow:0 0 16px rgba(232,32,26,0.5)}
 .s6-stat-label{font-family:'Oswald',sans-serif;font-weight:300;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
 .s6-socials{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
@@ -886,26 +926,32 @@ html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg-primary);
   </div>
   <div class="s6-right">
     <div class="s6-glow"></div>
-    <div class="s6-stat-box"><div class="s6-stat-val">683</div><div class="s6-stat-label">Spettatori medi</div></div>
-    <div class="s6-stat-box"><div class="s6-stat-val">10K+</div><div class="s6-stat-label">Unici mensili</div></div>
-    <div class="s6-stat-box"><div class="s6-stat-val">744K</div><div class="s6-stat-label">Minuti visti</div></div>
     <div class="s6-socials">
       <a class="s6-social-link" href="https://www.twitch.tv/falcokiller92" target="_blank">
         <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
         twitch.tv/falcokiller92
       </a>
-      <a class="s6-social-link" href="https://discord.gg/SST9Uqnx" target="_blank">
-        <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-        discord.gg/SST9Uqnx
+      <a class="s6-social-link" href="https://www.facebook.com/FalcoKiller92/" target="_blank">
+        <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        FalcoKiller92 · 15.848 follower
       </a>
       <a class="s6-social-link" href="https://www.instagram.com/falcokiller92_official/" target="_blank">
         <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         @falcokiller92_official
       </a>
-      <a class="s6-social-link email-link" href="#" onclick="window.open('mailto:Falcokiller92sponsor@outlook.com','_self');return false;">
-        <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <span class="__cf_email__" data-cfemail="c385a2afa0aca8aaafafa6b1faf1b0b3acadb0acb183acb6b7afacaca8eda0acae">[email&#160;protected]</span>
+      <a class="s6-social-link" href="https://discord.gg/SST9Uqnx" target="_blank">
+        <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+        discord.gg/SST9Uqnx
       </a>
+      <a class="s6-social-link" href="mailto:Falcokiller92sponsor@outlook.com">
+        <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Falcokiller92sponsor@outlook.com
+      </a>
+    </div>
+    <div class="s6-stats-row">
+      <div class="s6-stat-box"><div class="s6-stat-val">683</div><div class="s6-stat-label">Spettatori medi</div></div>
+      <div class="s6-stat-box"><div class="s6-stat-val">10K+</div><div class="s6-stat-label">Unici mensili</div></div>
+      <div class="s6-stat-box"><div class="s6-stat-val">744K</div><div class="s6-stat-label">Min. visti</div></div>
     </div>
   </div>
 </div>
