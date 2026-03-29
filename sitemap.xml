@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ── PAGINA PRINCIPALE ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://falcokiller92.github.io/sponsor-kit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://falcokiller92.github.io/sponsor-kit/"/>
+    <image:image>
+      <image:loc>https://falcokiller92.github.io/sponsor-kit/og-image.jpg</image:loc>
+      <image:title>FalcoKiller92 — Streamer GTA Roleplay Roma Italia</image:title>
+      <image:caption>FalcoKiller92, streamer italiano GTA 5 Roleplay su Twitch. 683 spettatori medi, 29.000+ reach social.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── SLIDE 1: Presentazione ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/#slide1</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── SLIDE 2: Numeri e statistiche Twitch ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/#slide2</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── SLIDE 3: Identità e storia ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/#slide3</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── SLIDE 4: Social e reach multipiattaforma ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/#slide4</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── SLIDE 5: Formati di sponsorizzazione ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/#slide5</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── SLIDE 6: Contatti per brand e sponsor ── -->
+  <url>
+    <loc>https://falcokiller92.github.io/sponsor-kit/#slide6</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
