@@ -759,28 +759,12 @@ html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg-primary);
 .s6-social-link{font-family:'Oswald',sans-serif;font-weight:400;font-size:0.82rem;letter-spacing:0.1em;color:var(--steel-light);text-decoration:none;display:flex;align-items:center;gap:10px;transition:color 0.2s}
 .s6-social-link:hover{color:var(--steel-shine)}
 .s6-social-icon{width:18px;height:18px;opacity:0.85}
-#lang-toggle:hover{border-color:var(--red-primary);color:var(--red-primary)}
 </style>
 </head>
 <body>
 
 <div id="progress-bar"></div>
 <canvas id="sparkleCanvas"></canvas>
-
-<!-- TOGGLE LINGUA — fisso in alto a destra -->
-<button id="lang-toggle" onclick="toggleLang()" style="
-  position:fixed;top:12px;right:14px;z-index:999;
-  background:rgba(7,7,7,0.75);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  border:1px solid rgba(184,212,232,0.3);
-  color:#ddeeff;
-  font-family:'Oswald',sans-serif;font-size:0.68rem;
-  letter-spacing:0.12em;text-transform:uppercase;
-  padding:5px 12px;height:30px;
-  cursor:pointer;transition:all 0.2s;
-  display:flex;align-items:center;gap:5px;
-  border-radius:2px;
-">🇮🇹 IT</button>
 
 <div id="slides-wrapper">
 
@@ -959,9 +943,9 @@ html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg-primary);
         <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
         discord.gg/SST9Uqnx
       </a>
-      <a class="s6-social-link" href="/cdn-cgi/l/email-protection#d492b5b8b7bbbfbdb8b8b1a6ede6a7a4bbbaa7bba694bba1a0b8bbbbbffab7bbb9">
+      <a class="s6-social-link" href="mailto:Falcokiller92sponsor@outlook.com">
         <svg class="s6-social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <span class="__cf_email__" data-cfemail="f1b7909d929e9a989d9d9483c8c382819e9f829e83b19e84859d9e9e9adf929e9c">[email&#160;protected]</span>
+        Falcokiller92sponsor@outlook.com
       </a>
     </div>
     <div class="s6-stats-row">
@@ -989,135 +973,7 @@ html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg-primary);
   <button class="nav-btn" id="nextBtn" onclick="navigate(1)">&#8594;</button>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ——— GOATCOUNTER ANALYTICS ———
-// Solo quando online su falcokiller92.github.io — non dà errori in locale
-(function(){
-  try {
-    if(location.hostname === 'localhost' || location.hostname === '' || location.protocol === 'file:') return;
-    window.goatcounter = { path: function(p){ return p; } };
-    var s = document.createElement('script');
-    s.dataset.goatcounter = 'https://falcokiller92.goatcounter.com/count';
-    s.async = true;
-    s.onerror = function(){};
-    s.src = '//gc.zgo.at/count.js';
-    document.head.appendChild(s);
-  } catch(e){}
-})();
-
-// Track link clicks — solo se goatcounter caricato
-document.addEventListener('click', function(e){
-  try {
-    var a = e.target.closest('a[href]');
-    if(!a || !window.goatcounter || !window.goatcounter.count) return;
-    var label = a.href.includes('twitch') ? 'click-twitch'
-              : a.href.includes('facebook') ? 'click-facebook'
-              : a.href.includes('instagram') ? 'click-instagram'
-              : a.href.includes('discord') ? 'click-discord'
-              : a.href.includes('mailto') ? 'click-email'
-              : null;
-    if(label) window.goatcounter.count({ path: label, title: label, event: true });
-  } catch(e){}
-});
-
-// ——— TRANSLATIONS ———
-let currentLang = 'it';
-
-const TRANSLATIONS = {
-  it: {
-    s1_kicker: '— Sponsor Kit 2026',
-    s1_tagline: 'Streamer italiano di riferimento nel GTA Roleplay. Storytelling autentico. Community reale. Numeri veri.',
-    s1_cta: 'SCOPRI IL KIT →',
-    s1_mail: 'INVIA UNA MAIL',
-    s2_title_pre: 'I NUMERI',
-    s2_title_post: 'NON MENTONO.',
-    s2_source: 'Fonte: Twitch Analytics · Marzo 2026 · Dati reali verificati',
-    s3_badge: 'Live · GTA Roleplay Italia',
-    s3_headline: 'UNA STORIA<br><span class="red">VERA.</span><br><span class="steel">UN CANALE</span><br>AUTENTICO.',
-    s3_body: 'FalcoKiller92 è Francesco — cresciuto a Tor Bella Monaca, Roma. Ha trasformato una storia difficile in una presenza digitale potente. Non è un personaggio costruito: è una voce reale che la sua community riconosce e segue con fedeltà. Sul server NOW RP interpreta personaggi con archi narrativi serializzati. Gli spettatori non guardano solo — tornano ogni stream perché aspettano il prossimo capitolo.',
-    s4_title: 'ECOSISTEMA SOCIAL FK',
-    s4_sub: 'Presenza multipiattaforma · Marzo 2026',
-    s5_title: 'COSA OFFRIAMO AI PARTNER',
-    s5_sub: 'Formati di collaborazione disponibili',
-    s6_over: 'Passo successivo',
-    s6_head: 'PRONTO<br>A FARE<br><span class="red">STORIA</span><br><span class="steel">INSIEME?</span>',
-    s6_sub: '683 spettatori ti aspettano ogni stream. Una community che si fida del suo creator. Contatta FalcoKiller92 direttamente.',
-    s6_cta: 'CONTATTA SU TWITCH →',
-    s6_mail: 'MANDA UNA MAIL →',
-    lang_btn: '🇬🇧 EN',
-  },
-  en: {
-    s1_kicker: '— Sponsor Kit 2026',
-    s1_tagline: 'Italy's leading GTA Roleplay streamer. Authentic storytelling. Real community. Real numbers.',
-    s1_cta: 'VIEW THE KIT →',
-    s1_mail: 'SEND AN EMAIL',
-    s2_title_pre: 'THE NUMBERS',
-    s2_title_post: "DON'T LIE.",
-    s2_source: 'Source: Twitch Analytics · March 2026 · Verified real data',
-    s3_badge: 'Live · GTA Roleplay Italy',
-    s3_headline: 'A REAL<br><span class="red">STORY.</span><br><span class="steel">AN AUTHENTIC</span><br>CHANNEL.',
-    s3_body: 'FalcoKiller92 is Francesco — raised in Tor Bella Monaca, Rome. He turned a difficult story into a powerful digital presence. This isn't a constructed character: it's a real voice that his community recognises and follows with loyalty. On the NOW RP server he plays characters with serialised narrative arcs. Viewers don't just watch — they come back every stream because they're waiting for the next chapter.',
-    s4_title: 'FK SOCIAL ECOSYSTEM',
-    s4_sub: 'Multi-platform presence · March 2026',
-    s5_title: 'WHAT WE OFFER PARTNERS',
-    s5_sub: 'Available collaboration formats',
-    s6_over: 'Next step',
-    s6_head: 'READY<br>TO MAKE<br><span class="red">HISTORY</span><br><span class="steel">TOGETHER?</span>',
-    s6_sub: '683 viewers are waiting every stream. A community that trusts its creator. Contact FalcoKiller92 directly.',
-    s6_cta: 'CONTACT ON TWITCH →',
-    s6_mail: 'SEND AN EMAIL →',
-    lang_btn: '🇮🇹 IT',
-  }
-};
-
-function toggleLang() {
-  currentLang = currentLang === 'it' ? 'en' : 'it';
-  applyLang(currentLang);
-}
-
-function applyLang(lang) {
-  const T = TRANSLATIONS[lang];
-  const q = (sel) => document.querySelector(sel);
-  const qa = (sel) => document.querySelectorAll(sel);
-
-  // Toggle button
-  q('#lang-toggle').textContent = T.lang_btn;
-  q('#lang-toggle').innerHTML = T.lang_btn;
-
-  // Slide 1
-  q('.s1-kicker').textContent = T.s1_kicker;
-  q('.s1-tagline').textContent = T.s1_tagline;
-  q('.s1-cta').textContent = T.s1_cta;
-  const mailBtns = document.querySelectorAll('.email-cta');
-  if(mailBtns[0]) { mailBtns[0].innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>' + T.s1_mail; }
-
-  // Slide 2
-  q('.s2-title').innerHTML = '<span class="red">' + T.s2_title_pre + '</span> ' + T.s2_title_post;
-  q('.s2-source').textContent = T.s2_source;
-
-  // Slide 3
-  q('.s3-badge').innerHTML = '<!-- badge dot preserved -->' + T.s3_badge;
-  q('.s3-headline').innerHTML = T.s3_headline;
-  q('.s3-body').innerHTML = T.s3_body;
-
-  // Slide 4
-  q('.s4-title').innerHTML = T.s4_title.replace('SOCIAL', '<span class="red">SOCIAL</span> <span class="steel">').replace(' FK', 'FK</span>') + '';
-  q('.s4-sub').textContent = T.s4_sub;
-
-  // Slide 5
-  q('.s5-title').innerHTML = lang === 'it'
-    ? 'COSA OFFRIAMO AI <span style="color:var(--red-primary)">PARTNER</span>'
-    : 'WHAT WE OFFER <span style="color:var(--red-primary)">PARTNERS</span>';
-  q('.s5-subtitle').textContent = T.s5_sub;
-
-  // Slide 6
-  q('.s6-overtitle').textContent = T.s6_over;
-  q('.s6-headline').innerHTML = T.s6_head;
-  q('.s6-sub').textContent = T.s6_sub;
-  q('.s6-cta').textContent = T.s6_cta;
-  if(mailBtns[1]) { mailBtns[1].innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>' + T.s6_mail; }
-}
-
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ——— NAVIGATION ———
 let current = 0;
 const total = 6;
@@ -1478,4 +1334,8 @@ animateSparkles();
     <li>Pacchetto personalizzato multipiattaforma con cross-posting social</li>
   </ul>
   <h2>Target audience FalcoKiller92</h2>
-  <p>La community di FalcoKiller92 è composta principalmente da gamer italiani tra i 18 e i 34 anni, app
+  <p>La community di FalcoKiller92 è composta principalmente da gamer italiani tra i 18 e i 34 anni, appassionati di GTA 5, GTA Roleplay e gaming in generale. Gli spettatori sono altamente coinvolti e tornano ogni stream perché seguono le storyline dei personaggi. Questo crea un pubblico che si fida delle raccomandazioni del creator.</p>
+  <h2>Brand ideali per collaborare con FalcoKiller92</h2>
+  <p>Gaming (periferiche, PC, accessori), energy drink e bevande, VPN e software, abbigliamento streetwear e gaming, brand lifestyle per giovani adulti italiani.</p>
+  <h2>Come contattare FalcoKiller92 per sponsorizzazioni</h2>
+  <p>Email spon
